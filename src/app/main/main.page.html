@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Múltiplos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Ingrese un número</ion-label>
+    <ion-input [(ngModel)]="inputNumber" type="number"></ion-input>
+    <!-- <ion-input (ionChange)="inputNumber = +$event.detail.value" type="number"></ion-input> -->
+  </ion-item>
+
+  <ion-button expand="block" (click)="calculateMultiples()"
+    >Calcular</ion-button
+  >
+
+  <div *ngFor="let item of results">
+    <span [style.color]="item.color">{{item.number}}</span>
+  </div>
+</ion-content>
